@@ -64,18 +64,16 @@ const cities = [
 <section class="py-8 bg-white">
   <div class="container mx-auto px-4">
     <h2
-      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-start mb-6 break-words w-full md:w-[75%] lg:w-[50%] leading-[40px] sm:leading-[45px] md:leading-[50px] lg:leading-[60px]"
+      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-start mb-6 break-words w-full md:w-[60%] lg:w-[70%] leading-[40px] sm:leading-[45px] md:leading-[50px] lg:leading-[60px]"
     >
       Temukan Kami di Kota Berikut untuk Hunian Impianmu! 🏡✨
     </h2>
 
     <!-- Swiper container -->
     <swiper-container
-      class="w-full"
-      space-between="20"
-      centered-slides="true"
-      speed="600"
-      loop="true"
+      class="w-full swiper-2"
+      init="false"
+      controller-control=".swiper-2"
     >
       {
         cities.map((city) => (
@@ -100,17 +98,16 @@ const cities = [
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const swiperEl = document.querySelector("swiper-container");
+    const swiperEl2 = document.querySelector(".swiper-2"); // Select the Swiper 2 container
 
-    const swiperParams = {
-      slidesPerView: 5.5,
+    const swiperParams2 = {
       autoplay: {
         delay: 500, // Reduced delay to 500ms for faster autoplay
         disableOnInteraction: false,
       },
       breakpoints: {
         640: {
-          slidesPerView: 2, // For mobile
+          slidesPerView: 2.5, // For mobile
         },
         768: {
           slidesPerView: 2.5, // For tablets
@@ -129,9 +126,9 @@ const cities = [
     };
 
     // Assign the parameters to the Swiper element
-    Object.assign(swiperEl, swiperParams);
+    Object.assign(swiperEl2, swiperParams2);
 
     // Initialize Swiper
-    swiperEl.initialize();
+    swiperEl2.initialize();
   });
 </script>
