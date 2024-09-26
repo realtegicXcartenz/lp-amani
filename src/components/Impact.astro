@@ -1,0 +1,146 @@
+---
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import RightBtn from "../../public/svg/right_carousel.svg?raw";
+import LeftBtn from "../../public/svg/left_carousel.svg?raw";
+import Impact1Img from "../../public/png/impact_1.png";
+import { Image } from "astro:assets";
+
+// Replace these with your actual images
+const impactSlides = [
+  {
+    title: "Dari Ngontrak Jadi Bisa Punya Rumah",
+    image: Impact1Img,
+    description:
+      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+  },
+  {
+    title: "Driver Bajaj Akhirnya Punya Rumah Sendiri",
+    image: Impact1Img,
+    description:
+      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+  },
+  {
+    title: "Punya Rumah Layak Bagi Pekerja Pasar",
+    image: Impact1Img,
+    description:
+      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+  },
+  {
+    title: "Pedagang Buah Bisa Menyicil Rumah",
+    image: Impact1Img,
+    description:
+      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+  },
+  {
+    title: "Punya Rumah Layak Bagi Pekerja Pasar",
+    image: Impact1Img,
+    description:
+      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+  },
+  {
+    title: "Pedagang Buah Bisa Menyicil Rumah",
+    image: Impact1Img,
+    description:
+      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+  },
+];
+---
+
+<section class="p-[4rem] md:py-[8.125rem] md:px-[7.5625rem] bg-custom-gradient text-white">
+  <div class="container flex flex-col md:flex-row gap-4 md:gap-16">
+    <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+      <h2 class="text-[3rem] mb-6 leading-none text-center md:text-left">
+        <b>Dampak</b>
+        <p><b>amani</b>home</p>
+      </h2>
+
+      <!-- Custom Buttons -->
+      <div class="flex flex-row gap-2">
+        <div class="custom-prev-button p-2 text-white">
+          <Fragment set:html={LeftBtn} />
+        </div>
+        <div class="custom-next-button p-2 text-white">
+          <Fragment set:html={RightBtn} />
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper container -->
+    <swiper-container
+      class="w-full swiper-1"
+      init="false"
+      controller-control=".swiper-1"
+      navigation-next-el=".custom-next-button"
+      navigation-prev-el=".custom-prev-button"
+    >
+      {
+        impactSlides.map((slide, index) => (
+          <swiper-slide key={index}>
+            <div class="relative rounded-lg w-full bg-transparent overflow-hidden flex flex-col items-center justify-center">
+              <Image
+                src={slide.image}
+                alt="Home Buyer"
+                class="w-full h-48 md:h-64 object-cover rounded-lg"
+              />
+              <div class="p-4">
+                <h3 class="text-lg md:text-xl font-semibold mb-2 text-center">
+                  {slide.title}
+                </h3>
+                <p class="text-sm md:text-base text-center">
+                  {slide.description}
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+        ))
+      }
+    </swiper-container>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swiperEl = document.querySelector(".swiper-1");
+
+    const swiperParams = {
+      autoplay: {
+        delay: 500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".custom-next-button",
+        prevEl: ".custom-prev-button",
+      },
+      loop: true, // Enable infinite loop
+      speed: 800,
+      centeredSlides: true,
+      spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 1, // Full width on small screens
+          centeredSlides: true,
+        },
+        640: {
+          slidesPerView: 1.5, // Show part of next slide
+          centeredSlides: false,
+        },
+        1024: {
+          slidesPerView: 2.5, // Show more slides on larger screens
+          centeredSlides: false,
+        },
+        1280: {
+          slidesPerView: 3, // Show 3 slides for large screens
+        },
+      },
+    };
+
+    // Assign the parameters to the Swiper element
+    Object.assign(swiperEl, swiperParams);
+
+    // Initialize Swiper
+    swiperEl.initialize();
+  });
+</script>
