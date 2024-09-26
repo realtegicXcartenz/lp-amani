@@ -1,0 +1,137 @@
+---
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay"; // For autoplay functionality
+import Tangerang from "../../public/png/tangerang.png";
+import { Image } from "astro:assets";
+
+// Sample data for cities
+const cities = [
+  {
+    name: "Kota Depok",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Tangerang",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Bekasi",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Boyolali",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Tangerang",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Bekasi",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Boyolali",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Tangerang",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Bekasi",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Boyolali",
+    image: Tangerang,
+    projects: "4 Proyek Kerjasama",
+  },
+];
+---
+
+<section class="py-8 bg-white">
+  <div class="container mx-auto px-4">
+    <h2
+      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-start mb-6 break-words w-full md:w-[75%] lg:w-[50%] leading-[40px] sm:leading-[45px] md:leading-[50px] lg:leading-[60px]"
+    >
+      Temukan Kami di Kota Berikut untuk Hunian Impianmu! 🏡✨
+    </h2>
+
+    <!-- Swiper container -->
+    <swiper-container
+      class="w-full"
+      space-between="20"
+      centered-slides="true"
+      speed="600"
+      loop="true"
+    >
+      {
+        cities.map((city) => (
+          <swiper-slide key={city.name}>
+            <div class="relative rounded-lg overflow-hidden shadow-md w-full">
+              <Image
+                src={city.image}
+                alt={city.name}
+                class="w-full h-48 md:h-64 lg:h-72 object-cover"
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent text-white p-4">
+                <h3 class="text-lg md:text-xl font-semibold">{city.name}</h3>
+                <p class="text-sm md:text-base">{city.projects}</p>
+              </div>
+            </div>
+          </swiper-slide>
+        ))
+      }
+    </swiper-container>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swiperEl = document.querySelector("swiper-container");
+
+    const swiperParams = {
+      slidesPerView: 5.5,
+      autoplay: {
+        delay: 500, // Reduced delay to 500ms for faster autoplay
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2, // For mobile
+        },
+        768: {
+          slidesPerView: 2.5, // For tablets
+        },
+        1024: {
+          slidesPerView: 3.5, // For desktops
+        },
+        1280: {
+          slidesPerView: 4.5, // For large screens
+        },
+      },
+      loop: true,
+      spaceBetween: 20,
+      centeredSlides: true,
+      speed: 800,
+    };
+
+    // Assign the parameters to the Swiper element
+    Object.assign(swiperEl, swiperParams);
+
+    // Initialize Swiper
+    swiperEl.initialize();
+  });
+</script>
