@@ -1,0 +1,104 @@
+---
+import HomeBuyer from "../../public/png/home_buyer.png";
+import HomeInvestor from "../../public/png/home_investor.png";
+import LeftBlueIcon from "../../public/svg/left_blue_icon.svg?raw";
+import { Image } from "astro:assets";
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitur Kami Sediakan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Main Section -->
+    <section class="w-full p-4 md:p-[1.5625rem] bg-white">
+      <div
+        class="px-4 md:px-[7.5rem] py-12 md:py-[6.25rem] bg-[#EAF1FF] rounded-2xl"
+      >
+        <div class="text-start mb-8 md:mb-12">
+          <h2
+            class="text-[1.75rem] md:text-[2.25rem] font-bold text-[#001847] mb-2"
+          >
+            Jelajahi Semua Fitur yang Kami Sediakan
+          </h2>
+          <p class="text-[#0A0B0D] text-[1rem] md:text-lg">
+            Temukan berbagai solusi inovatif yang dirancang khusus untuk
+            memenuhi kebutuhan Anda, mulai dari kemudahan akses hingga layanan
+            pelanggan yang unggul, sehingga Anda dapat merasakan pengalaman
+            terbaik dalam berinvestasi dan memiliki hunian impian.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8">
+          <!-- Card 1: Home Buyer -->
+          <div
+            class="flex flex-col md:flex-row overflow-hidden items-center bg-white shadow-lg md:bg-transparent md:shadow-none rounded-lg"
+          >
+            <Image
+              src={HomeBuyer}
+              alt="Home Buyer"
+              class="w-full md:w-1/3 h-48 md:h-auto object-cover"
+            />
+            <div class="p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-[#2F6DEB] text-xl mb-2">Home Buyer</p>
+                <h3 class="text-xl font-bold text-[#001847] mb-4">
+                  Pilih Rumah Yang Kamu Mau
+                </h3>
+                <p class="text-[#0A0B0D] mb-6">
+                  Miliki rumah impian Anda tanpa terikat pada syarat
+                  konvensional. Dengan fleksibilitas yang kami tawarkan, Anda
+                  dapat memilih tipe rumah dan lokasi yang sesuai dengan
+                  kemampuan bayar Anda, sehingga kepemilikan rumah menjadi lebih
+                  mudah dan terjangkau.
+                </p>
+              </div>
+              <div
+                class="bg-white p-1 rounded-full hover:bg-blue-100 transition items-center justify-center flex w-[15.9375rem] gap-2 cursor-pointer"
+              >
+                <p class="text-[#2F6DEB] text-[1rem]">Pelajari Lebih Lanjut</p>
+                <Fragment set:html={LeftBlueIcon} />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Home Investor -->
+          <div
+            class="flex flex-col md:flex-row overflow-hidden items-center bg-white shadow-lg md:bg-transparent md:shadow-none rounded-lg"
+          >
+            <Image
+              src={HomeInvestor}
+              alt="Home Investor"
+              class="w-full md:w-1/3 h-48 md:h-auto object-cover"
+            />
+            <div class="p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-[#2F6DEB] text-xl mb-2">Home Investor</p>
+                <h3 class="text-xl font-bold text-[#001847] mb-4">
+                  Kesempatan Pendapatan Pasif Mulai 1 Juta
+                </h3>
+                <p class="text-[#0A0B0D] mb-6">
+                  Dengan memilih rumah sebagai aset, Anda tidak hanya
+                  mendapatkan tempat tinggal yang nyaman, tetapi juga sebuah
+                  investasi yang dapat tumbuh nilainya seiring waktu. Kami
+                  memberikan jaminan bahwa rumah Anda akan terjual kembali pada
+                  saat yang tepat.
+                </p>
+              </div>
+              <div
+                class="bg-white p-1 rounded-full hover:bg-blue-100 transition items-center justify-center flex w-[15.9375rem] gap-2 cursor-pointer"
+              >
+                <p class="text-[#2F6DEB] text-[1rem]">Pelajari Lebih Lanjut</p>
+                <Fragment set:html={LeftBlueIcon} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+---
+import BankIcon from "../../public/svg/solutions/bank_icon.svg?raw";
+import HouseIcon from "../../public/svg/solutions/house_icon.svg?raw";
+import MoneyIcon from "../../public/svg/solutions/money_icon.svg?raw";
+import SolutionBg from "../../public/svg/solutions/solution_bg.svg?raw";
+---
+
+<!doctype html>
+<html lang="id" class="bg-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solusi Mudah Kepemilikan Rumah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white">
+    <section
+      class="relative w-full h-auto px-4 md:px-[7.5rem] py-12 md:pt-[6.25rem] md:pb-[7.5rem] bg-white"
+    >
+      <!-- SVG background on the left -->
+      <div
+        class="absolute top-0 left-0 w-[250px] h-auto bg-left bg-contain hidden md:block"
+      >
+        <Fragment set:html={SolutionBg} />
+      </div>
+
+      <div
+        class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-10"
+      >
+        <!-- Left side: Headline and description -->
+        <div class="w-full md:w-[37%] text-left">
+          <h2
+            class="text-[2rem] leading-[2.5rem] md:text-[2.25rem] md:leading-[3.125rem] font-bold text-blue-900 mb-4"
+          >
+            Solusi mudah untuk <br /> kepemilikan rumah
+          </h2>
+          <p class="text-gray-700 text-[1rem]">
+            Amani bantu Anda miliki rumah impian, serta mendukung developer dan
+            pemilik lahan meraih keuntungan optimal
+          </p>
+        </div>
+
+        <!-- Right side: Solutions or problems -->
+        <div class="w-full md:w-[70%] grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-lg">
+            <div class="mb-5">
+              <Fragment set:html={BankIcon} />
+              <h3 class="text-[1.5rem] font-semibold text-blue-900 mt-3">
+                Masalah Bank
+              </h3>
+            </div>
+            <p class="text-gray-700 text-[1rem]">
+              Banyak yang tidak lolos kredit di perbankan karena 82% masyarakat
+              Indonesia bekerja di sektor informal
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-lg">
+            <div class="mb-5">
+              <Fragment set:html={MoneyIcon} />
+              <h3 class="text-[1.5rem] font-semibold text-blue-900 mt-3">
+                Masalah Modal
+              </h3>
+            </div>
+            <p class="text-gray-700 text-[1rem]">
+              Banyak terkendala dengan manajemen dan modal untuk konstruksi,
+              sehingga konsumen dirugikan
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg">
+            <div class="mb-5">
+              <Fragment set:html={HouseIcon} />
+              <h3 class="text-[1.5rem] font-semibold text-blue-900 mt-3">
+                Kenaikan Harga Rumah
+              </h3>
+            </div>
+            <p class="text-gray-700 text-[1rem]">
+              Rumah di Jakarta oversupply sehingga susah untuk dijual
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

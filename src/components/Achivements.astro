@@ -1,0 +1,101 @@
+---
+import House from "../../public/svg/achivements/house_bg_icon.svg?raw";
+import Money from "../../public/svg/achivements/money_bg_icon.svg?raw";
+import People from "../../public/svg/achivements/people_icon.svg?raw";
+import Contractor from "../../public/svg/achivements/contractor_icon.svg?raw";
+import Developer from "../../public/svg/achivements/developer_icon.svg?raw";
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pencapaian Amani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section
+      class="w-full px-8 md:px-[12.5rem] lg:px-64 py-20 md:py-[7.5rem] text-center bg-white flex flex-col items-center"
+    >
+      <!-- Heading -->
+      <h2
+        class="text-[#001847] text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
+      >
+        Pencapaian Amani
+      </h2>
+      <p class="text-gray-700 text-sm md:text-base lg:text-lg mb-10">
+        Perusahaan kami telah mencapai tonggak sejarah yang membanggakan dalam
+        industri perumahan. Kami berkomitmen untuk terus berinovasi dan
+        memberikan yang terbaik bagi semua pemangku kepentingan.
+      </p>
+
+      <!-- Stats Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-10 text-start gap-6"
+      >
+        <!-- Stat 1 -->
+        <div class="flex flex-row items-start gap-4">
+          <Fragment set:html={House} />
+          <div class="flex flex-col md:gap-3">
+            <h3 class="text-[#0F2F7A] text-2xl md:text-[2.5rem] font-bold">
+              1000+
+            </h3>
+            <p class="text-[#41424A] text-base md:text-lg">Rumah Dibangun</p>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="flex flex-row items-start gap-4">
+          <Fragment set:html={Money} />
+          <div class="flex flex-col md:gap-3">
+            <h3 class="text-[#0F2F7A] text-2xl md:text-[2.5rem] font-bold">
+              500M
+            </h3>
+            <p class="text-[#41424A] text-base md:text-lg">
+              Pembiayaan Developer
+            </p>
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="flex flex-row items-start gap-4">
+          <Fragment set:html={People} />
+          <div class="flex flex-col md:gap-3">
+            <h3 class="text-[#0F2F7A] text-2xl md:text-[2.5rem] font-bold">
+              1000+
+            </h3>
+            <p class="text-[#41424A] text-base md:text-lg">Konsumen Amani</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Stats Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 mb-10 text-start gap-6">
+        <!-- Stat 4 -->
+        <div class="flex flex-row items-start gap-4">
+          <Fragment set:html={Contractor} />
+          <div class="flex flex-col md:gap-3">
+            <h3 class="text-[#0F2F7A] text-2xl md:text-[2.5rem] font-bold">
+              500+
+            </h3>
+            <p class="text-[#41424A] text-base md:text-lg">
+              Mitra Kontraktor Amani
+            </p>
+          </div>
+        </div>
+
+        <!-- Stat 5 -->
+        <div class="flex flex-row items-start gap-4">
+          <Fragment set:html={Developer} />
+          <div class="flex flex-col md:gap-3">
+            <h3 class="text-[#0F2F7A] text-2xl md:text-[2.5rem] font-bold">
+              700+
+            </h3>
+            <p class="text-[#41424A] text-base md:text-lg">Mitra Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

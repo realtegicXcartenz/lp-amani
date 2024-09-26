@@ -1,0 +1,67 @@
+---
+import AmaniLogo from "../../public/svg/amani_white_logo.svg?raw";
+import Linkedin from "../../public/svg/Linkedin.svg?raw";
+import Instagram from "../../public/svg/instagram.svg?raw";
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amani Footer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Footer Section -->
+    <footer class="bg-[#001847] text-white py-12 px-6 md:px-16 lg:px-40">
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8"
+      >
+        <!-- Left Section - Social Media -->
+        <div class="mb-6 md:mb-0">
+          <!-- Logo -->
+          <div class="mb-6">
+            <Fragment set:html={AmaniLogo} />
+          </div>
+
+          <!-- Social Media Links -->
+          <h4 class="text-lg font-bold mb-2">Sosial Media Amani</h4>
+          <ul>
+            <li class="flex items-center mb-2 gap-2">
+              <Fragment set:html={Instagram} />
+
+              <a
+                href="https://www.instagram.com/amanihome.id"
+                class="hover:underline">@amanihome.id</a
+              >
+            </li>
+            <li class="flex items-center mb-2 gap-2">
+              <Fragment set:html={Linkedin} />
+              <a
+                href="https://www.linkedin.com/company/amani-home"
+                class="hover:underline">Amani Home</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Section - Location -->
+        <div>
+          <h4 class="text-lg font-bold mb-2">Lokasi</h4>
+          <p class="leading-relaxed">
+            Millenium Centennial Center Lt.51<br />
+            Jl. Jenderal Sudirman No.Kav 25, Kuningan, Karet,<br />
+            Setiabudi, Kota Jakarta Selatan, DKI Jakarta 12920
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Section - Copyright -->
+      <div class="border-t border-gray-600 pt-4 text-center">
+        <p>All rights reserved Amani ©2024</p>
+      </div>
+    </footer>
+  </body>
+</html>
