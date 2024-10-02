@@ -1,0 +1,58 @@
+---
+import underConsImage from "../../public/png/under_cons.png";
+import { Image } from "astro:assets";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Main Content -->
+    <div class="text-center justify-center items-center h-screen w-full">
+      <!-- Robot Image -->
+      <div class="flex flex-col items-center justify-center h-full gap-6">
+        <Image src={underConsImage} alt={"undere"} />
+
+        <div>
+          <!-- Title -->
+          <h1 class="text-2xl font-semibold text-gray-800">Mohon Maaf</h1>
+
+          <!-- Subtitle -->
+          <p class="text-gray-500 mb-8">
+            Server sedang dalam perbaikan, ulangi beberapa saat lagi
+          </p>
+        </div>
+
+        <!-- Button Section -->
+        <div class="flex justify-center space-x-4">
+          <!-- Back to Homepage Button -->
+          <a
+            href="/"
+            class="px-6 py-2 border border-blue-500 text-blue-500 font-medium rounded-md hover:bg-blue-50"
+          >
+            Kembali ke Beranda
+          </a>
+
+          <!-- Contact Amani Button -->
+          <a
+            href="mailto:contact@amani.com"
+            class="px-6 py-2 bg-[#003399] text-white font-medium rounded-md hover:bg-blue-800"
+          >
+            Hubungi Amani
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

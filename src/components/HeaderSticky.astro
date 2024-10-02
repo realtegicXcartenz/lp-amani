@@ -1,0 +1,42 @@
+---
+import AmaniLogo from "../../public/svg/amani_white_logo.svg?raw";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Header</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-blue-900 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo Section -->
+        <div class="flex items-center space-x-2">
+          <Fragment set:html={AmaniLogo} />
+        </div>
+
+        <!-- Right Section (Dropdown) -->
+        <div class="flex items-center space-x-1 text-white">
+          <span>Tentang Kami</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
