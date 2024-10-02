@@ -1,7 +1,10 @@
 ---
 import AmaniLogo from "../../public/svg/amani_white_logo.svg?raw";
-import Linkedin from "../../public/svg/linkedin.svg?raw";
-import Instagram from "../../public/svg/instagram.svg?raw";
+import Linkedin from "../../public/svg/sns/linkedin.svg?raw";
+import Instagram from "../../public/svg/sns/instagram.svg?raw";
+import Facebook from "../../public/svg/sns/facebook.svg?raw";
+import Youtube from "../../public/svg/sns/youtube.svg?raw";
+import Tiktok from "../../public/svg/sns/tiktok.svg?raw";
 ---
 
 <!doctype html>
@@ -28,33 +31,71 @@ import Instagram from "../../public/svg/instagram.svg?raw";
 
           <!-- Social Media Links -->
           <h4 class="text-lg font-bold mb-2">Sosial Media Amani</h4>
-          <ul>
-            <li class="flex items-center mb-2 gap-2">
-              <Fragment set:html={Instagram} />
+          <div class="flex flex-row gap-10">
+            <ul>
+              <!-- Instagram -->
+              <li class="flex items-center mb-2 gap-2">
+                <Fragment set:html={Instagram} />
+                <a
+                  href="https://www.instagram.com/amani.co.id/"
+                  target="_blank"
+                  class="hover:underline">@amanihome.id</a
+                >
+              </li>
 
-              <a
-                href="https://www.instagram.com/amanihome.id"
-                class="hover:underline">@amanihome.id</a
-              >
-            </li>
-            <li class="flex items-center mb-2 gap-2">
-              <Fragment set:html={Linkedin} />
-              <a
-                href="https://www.linkedin.com/company/amani-home"
-                class="hover:underline">Amani Home</a
-              >
-            </li>
-          </ul>
+              <!-- LinkedIn -->
+              <li class="flex items-center mb-2 gap-2">
+                <Fragment set:html={Linkedin} />
+                <a
+                  href="https://www.linkedin.com/company/amani-home"
+                  target="_blank"
+                  class="hover:underline">Amani Home</a
+                >
+              </li>
+
+              <!-- Facebook -->
+              <li class="flex items-center mb-2 gap-2">
+                <Fragment set:html={Facebook} />
+                <a
+                  href="https://www.facebook.com/people/Amani/61565724703534/"
+                  target="_blank"
+                  class="hover:underline">Amani Home</a
+                >
+              </li>
+            </ul>
+            <ul>
+              <li class="flex items-center mb-2 gap-2">
+                <Fragment set:html={Youtube} />
+                <a
+                  href="https://www.youtube.com/@AmaniGroup-id"
+                  target="_blank"
+                  class="hover:underline">Amani Home</a
+                >
+              </li>
+
+              <!-- TikTok -->
+              <li class="flex items-center mb-2 gap-2">
+                <Fragment set:html={Tiktok} />
+                <a
+                  href="https://www.tiktok.com/@amani.co.id?_t=8qCWi7zoPx4&_r=1"
+                  target="_blank"
+                  class="hover:underline">@amanihome.id</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Right Section - Location -->
         <div>
           <h4 class="text-lg font-bold mb-2">Lokasi</h4>
-          <p class="leading-relaxed">
-            Millenium Centennial Center Lt.51<br />
-            Jl. Jenderal Sudirman No.Kav 25, Kuningan, Karet,<br />
-            Setiabudi, Kota Jakarta Selatan, DKI Jakarta 12920
-          </p>
+          <a href="https://maps.app.goo.gl/a4ZBjuSCB2MXZ9Lr6" target="_blank">
+            <p class="leading-relaxed">
+              Millenium Centennial Center Lt.51<br />
+              Jl. Jenderal Sudirman No.Kav 25, Kuningan, Karet,<br />
+              Setiabudi, Kota Jakarta Selatan, DKI Jakarta 12920
+            </p>
+          </a>
         </div>
       </div>
 

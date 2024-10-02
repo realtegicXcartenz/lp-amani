@@ -3,14 +3,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay"; // For autoplay functionality
-import Tangerang from "../../public/png/tangerang.png";
+import Tangerang from "../../public/png/cities/tangerang.png";
+import Bekasi from "../../public/png/cities/Bekasi.png";
+import Boyolali from "../../public/png/cities/Boyolali.png";
+import Depok from "../../public/png/cities/Depok.png";
+
 import { Image } from "astro:assets";
 
 // Sample data for cities
 const cities = [
   {
     name: "Kota Depok",
-    image: Tangerang,
+    image: Depok,
     projects: "4 Proyek Kerjasama",
   },
   {
@@ -20,12 +24,17 @@ const cities = [
   },
   {
     name: "Kota Bekasi",
-    image: Tangerang,
+    image: Bekasi,
     projects: "4 Proyek Kerjasama",
   },
   {
     name: "Kota Boyolali",
-    image: Tangerang,
+    image: Boyolali,
+    projects: "4 Proyek Kerjasama",
+  },
+  {
+    name: "Kota Depok",
+    image: Depok,
     projects: "4 Proyek Kerjasama",
   },
   {
@@ -35,27 +44,12 @@ const cities = [
   },
   {
     name: "Kota Bekasi",
-    image: Tangerang,
+    image: Bekasi,
     projects: "4 Proyek Kerjasama",
   },
   {
     name: "Kota Boyolali",
-    image: Tangerang,
-    projects: "4 Proyek Kerjasama",
-  },
-  {
-    name: "Kota Tangerang",
-    image: Tangerang,
-    projects: "4 Proyek Kerjasama",
-  },
-  {
-    name: "Kota Bekasi",
-    image: Tangerang,
-    projects: "4 Proyek Kerjasama",
-  },
-  {
-    name: "Kota Boyolali",
-    image: Tangerang,
+    image: Boyolali,
     projects: "4 Proyek Kerjasama",
   },
 ];
@@ -66,7 +60,7 @@ const cities = [
     <h2
       class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-start mb-6 break-words w-full md:w-[60%] lg:w-[70%] leading-[40px] sm:leading-[45px] md:leading-[50px] lg:leading-[60px]"
     >
-      Temukan Kami di Kota Berikut untuk Hunian Impianmu! 🏡✨
+      Temukan Amani di Lokasi Idamanmu
     </h2>
 
     <!-- Swiper container -->
@@ -86,7 +80,7 @@ const cities = [
               />
               <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent text-white p-4">
                 <h3 class="text-lg md:text-xl font-semibold">{city.name}</h3>
-                <p class="text-sm md:text-base">{city.projects}</p>
+                {/* <p class="text-sm md:text-base">{city.projects}</p> */}
               </div>
             </div>
           </swiper-slide>

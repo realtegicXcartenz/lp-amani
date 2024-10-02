@@ -1,0 +1,123 @@
+---
+import Buyer from "../../public/svg/features/buyer.svg?raw";
+import Developer from "../../public/svg/features/developer.svg?raw";
+import Investor from "../../public/svg/features/investor.svg?raw";
+import Seller from "../../public/svg/features/seller.svg?raw";
+import Supplier from "../../public/svg/features/supplier.svg?raw";
+import Kontraktor from "../../public/svg/features/kontraktor.svg?raw";
+import LandOwner from "../../public/svg/features/land_owner.svg?raw";
+import SalesAgent from "../../public/svg/features/sales_agent.svg?raw";
+
+import BuyerImage from "../../public/png/features/buyer.png";
+import DeveloperImage from "../../public/png/features/developer.png";
+import InvestorImage from "../../public/png/features/investor.png";
+import SellerImage from "../../public/png/features/seller.png";
+import SupplierImage from "../../public/png/features/supplier.png";
+import KontraktorImage from "../../public/png/features/kontraktor.png";
+import LandOwnerImage from "../../public/png/features/land_owner.png";
+import SalesAgentImage from "../../public/png/features/sales_agent.png";
+
+import { Image } from "astro:assets";
+
+const sections = [
+  {
+    title: "Buyer",
+    description: "Pilih Rumah Idaman Kamu",
+    link: "https://amani.co.id/buyer",
+    badge: Buyer,
+    imgSrc: BuyerImage,
+  },
+  {
+    title: "Investor",
+    description: "Passive Income mulai dari 1 Juta",
+    link: "https://amani.co.id/investor",
+    badge: Investor,
+    imgSrc: InvestorImage,
+  },
+  {
+    title: "Seller",
+    description: "Jual Rumah Tanpa Pusing",
+    link: "https://amani.co.id/seller",
+    badge: Seller,
+    imgSrc: SellerImage,
+  },
+  {
+    title: "Developer",
+    description: "Dapatkan Pembiayaan Proyek",
+    link: "https://amani.co.id/developer",
+    badge: Developer,
+    imgSrc: DeveloperImage,
+  },
+  {
+    title: "Kontraktor",
+    description: "Jadi Mitra Kontraktor Kami",
+    link: "https://amani.co.id/kontraktor",
+    badge: Kontraktor,
+    imgSrc: KontraktorImage,
+  },
+  {
+    title: "Supplier",
+    description: "Tingkatkan Penjualan dan Jangkauan",
+    link: "https://amani.co.id/supplier",
+    badge: Supplier,
+    imgSrc: SupplierImage,
+  },
+  {
+    title: "Land Owner",
+    description: "Optimalkan Tanahmu",
+    link: "https://amani.co.id/landowner",
+    badge: LandOwner,
+    imgSrc: LandOwnerImage,
+  },
+  {
+    title: "Sales Agent",
+    description: "Dapatkan komisi Menarik",
+    link: "https://amani.co.id/salesagent",
+    badge: SalesAgent,
+    imgSrc: SalesAgentImage,
+  },
+];
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siap Bergabung dengan Amani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="py-16 bg-white">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-semibold mb-12">Bangun Bersama Amani</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {
+            sections.map((section) => (
+              <div class="relative bg-[#F8FAFC] shadow-[0px_10px_20px_rgba(0,0,0,0.1)] rounded-2xl overflow-hidden p-3">
+                <div class="absolute top-0 left-0 font-semibold py-1">
+                  <Fragment set:html={section.badge} />
+                </div>
+                <Image
+                  src={section.imgSrc}
+                  alt={section.title}
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-2">
+                  <h3 class="font-bold mb-2">{section.description}</h3>
+                  <a
+                    href={section.link}
+                    target="_blank"
+                    class="text-[#2F6DEB] font-medium hover:underline"
+                  >
+                    Pelajari >
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

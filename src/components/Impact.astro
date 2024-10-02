@@ -5,46 +5,38 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import RightBtn from "../../public/svg/right_carousel.svg?raw";
 import LeftBtn from "../../public/svg/left_carousel.svg?raw";
-import Impact1Img from "../../public/png/impact_1.png";
+import Impact1Img from "../../public/png/impact/impact_1.png";
+import Impact2Img from "../../public/png/impact/impact_2.png";
+
 import { Image } from "astro:assets";
 
 // Replace these with your actual images
 const impactSlides = [
   {
-    title: "Dari Ngontrak Jadi Bisa Punya Rumah",
+    title: "Memahami Konsep Rent to Own: Solusi Fleksibel untuk Membeli Rumah",
     image: Impact1Img,
     description:
-      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+      "Rent to Own adalah skema pembelian rumah dengan cara menyewa terlebih dahulu sebelum memutuskan untuk ingin memiliki hunian tetapi belum memiliki dana yang cukup untuk mengajukan Kredit Pemilikan Rumah (KPR).",
   },
   {
-    title: "Driver Bajaj Akhirnya Punya Rumah Sendiri",
-    image: Impact1Img,
+    title:
+      "Soft Launching Amani Home di Millenium Centennial Center: Solusi untuk Unbankable dan Investor Properti",
+    image: Impact2Img,
     description:
-      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+      "Rent to Own adalah skema pembelian rumah dengan cara menyewa terlebih dahulu sebelum memutuskan untuk ingin memiliki hunian tetapi belum memiliki dana yang cukup untuk mengajukan Kredit Pemilikan Rumah (KPR).",
   },
   {
-    title: "Punya Rumah Layak Bagi Pekerja Pasar",
+    title: "Memahami Konsep Rent to Own: Solusi Fleksibel untuk Membeli Rumah",
     image: Impact1Img,
     description:
-      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+      "Rent to Own adalah skema pembelian rumah dengan cara menyewa terlebih dahulu sebelum memutuskan untuk ingin memiliki hunian tetapi belum memiliki dana yang cukup untuk mengajukan Kredit Pemilikan Rumah (KPR).",
   },
   {
-    title: "Pedagang Buah Bisa Menyicil Rumah",
-    image: Impact1Img,
+    title:
+      "Soft Launching Amani Home di Millenium Centennial Center: Solusi untuk Unbankable dan Investor Properti",
+    image: Impact2Img,
     description:
-      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
-  },
-  {
-    title: "Punya Rumah Layak Bagi Pekerja Pasar",
-    image: Impact1Img,
-    description:
-      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
-  },
-  {
-    title: "Pedagang Buah Bisa Menyicil Rumah",
-    image: Impact1Img,
-    description:
-      "Qorem ipsum dolor sit amet, lorem consectetur adipiscing elit lorem amet",
+      "Rent to Own adalah skema pembelian rumah dengan cara menyewa terlebih dahulu sebelum memutuskan untuk ingin memiliki hunian tetapi belum memiliki dana yang cukup untuk mengajukan Kredit Pemilikan Rumah (KPR).",
   },
 ];
 ---
@@ -54,9 +46,10 @@ const impactSlides = [
 >
   <div class="container flex flex-col md:flex-row gap-4 md:gap-16">
     <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
-      <h2 class="text-[3rem] mb-6 leading-none text-center md:text-left">
-        <b>Dampak</b>
-        <p><b>amani</b>home</p>
+      <h2
+        class="text-5xl leading-[4.1875rem] mb-6 font-semibold text-center md:text-left"
+      >
+        Ikuti Perjalanan Amani
       </h2>
 
       <!-- Custom Buttons -->
@@ -88,10 +81,10 @@ const impactSlides = [
                   class="w-full h-30 md:h-48 object-cover rounded-lg"
                 />
                 <div class="py-4">
-                  <h3 class="text-lg md:text-2xl font-semibold mb-2 text-center md:text-left">
+                  <h3 class="text-lg md:text-xl font-semibold mb-2 text-center md:text-left">
                     {slide.title}
                   </h3>
-                  <p class="text-sm md:text-lg text-center  md:text-left">
+                  <p class="text-sm md:text-lg text-center md:text-left line-clamp-3">
                     {slide.description}
                   </p>
                 </div>
@@ -109,7 +102,7 @@ const impactSlides = [
 
       const swiperParams = {
         autoplay: {
-          delay: 500,
+          delay: 800,
           disableOnInteraction: false,
         },
         navigation: {

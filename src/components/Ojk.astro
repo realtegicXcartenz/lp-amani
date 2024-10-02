@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import Lock from "../../public/png/lock.png";
+
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amani - Gak Perlu Khawatir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F8FAFC]">
+    <!-- Section with border -->
+    <section class="bg-[#F8FAFC] rounded-lg py-[6.25rem] px-[7.5rem]">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <!-- Text Section -->
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
+            Gak Perlu Khawatir
+          </h2>
+          <p class="text-gray-600">
+            Seluruh proses finansial di Amani melalui bank yang berizin dan
+            diawasi oleh
+            <strong>Otoritas Jasa Keuangan (OJK)</strong> dan <strong
+              >Bank Indonesia</strong
+            >, serta merupakan peserta penjaminan <strong>LPS</strong>. Jadi,
+            transaksi keuanganmu tetap aman dan terpercaya!
+          </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="md:w-1/2 flex justify-center">
+          <Image
+            src={Lock}
+            alt={"lock"}
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
